@@ -1,0 +1,368 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #f5f5f5;
+}
+
+
+:root {
+ --color-light-gray-6: rgb(242, 242, 247);
+}
+
+.main {
+   width: 100%;
+   height: 100%;
+   background-size: cover;
+   background-position: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   /* 🔹 Image + Gradient overlay combined */
+   background-image: 
+      linear-gradient(
+         to top left,
+         rgba(255, 255, 255, 0.3),
+         rgba(255, 255, 255, 0.05)
+      ),
+      url("./images/backgroud.jpg");
+}
+
+
+
+
+.box {
+    width: 80%;
+    height: 80%;
+    background: rgba(255, 255, 255, 0.08); 
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(20px) saturate(150%); 
+    -webkit-backdrop-filter: blur(20px) saturate(150%); 
+    border-radius: 40px;   
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); 
+    /* overflow: hidden; */
+    user-select: none;
+
+}
+
+
+.inp{
+   
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    margin-top: 19px;
+    width: 60%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 0);
+     box-sizing: border-box; 
+}
+input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  color: rgb(255, 251, 251);
+  font-size: 26px;
+  border: none;
+  outline: none;
+  padding: 12px 16px;        
+}
+input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 26px;
+}
+
+#icon {
+  position: relative;
+  left: 92%;
+  transform: translateX(-50%);
+  top: 35px;
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  transition: color 0.3s ease;
+  z-index: 10000;
+}
+/* Mobile ke liye (480px tak screen width) */
+@media (max-width: 480px) {
+  #icon {
+    left: 85%;
+  }
+}
+
+#icon:hover {
+  color: rgb(255, 255, 255);
+ 
+}
+
+#icon .option {
+  position: absolute;
+  top: 120%; 
+  left: -50%;
+  transform: translateX(-50%);
+  
+  /* Glassmorphism effect */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  
+  width: max-content;
+  padding: 12px 18px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  transition: all 0.3s ease-in-out;
+display: none; /* Initially hidden */
+
+}
+
+/* Dropdown items */
+#icon .option .opt {
+  display: block;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+}
+
+/* Hover effect */
+#icon .option .opt:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  transform: translateX(3px);
+  
+}
+
+
+
+  
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 24px 36px;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.08); /* transparent glass */
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+
+  margin: 50px auto;
+  max-width: 320px;
+
+  animation: fadeUp 0.6s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.not-found i {
+  font-size: 48px;
+  margin-bottom: 12px;
+  opacity: 0.9;
+  background: linear-gradient(135deg, #00c6ff, #b06ab3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes borderGlow {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+
+
+.line{
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.1);
+margin-top: 70px;
+}
+
+
+.gallery{
+  width: 100%;
+  height: calc(100% - 100px);
+  /* border: 2px solid red; */
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  padding: 20px 20px; 
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  overflow-y: auto  ;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    position: relative;
+}
+
+
+.gallery::-webkit-scrollbar {
+  display: none; 
+}
+
+.gallery {
+  transition: transform 0.2s ease-out, box-shadow 0.3s ease-out;
+  transform-style: preserve-3d;
+  /* display: none; */
+  /* overflow: visible; */
+
+}
+
+.one {
+  width: 250px;
+   pointer-events: auto; 
+  /* height: 150px; */
+   aspect-ratio: 4/4;
+  border: 2px solid black;
+  border-radius: 40px;
+  position: relative; /* important for overlaying text */
+  overflow: hidden;   /* image aur text ko div ke andar clip karne ke liye */
+}
+
+.one img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 40px;
+  /* display: none;/ */
+}
+
+
+
+.text {
+  position: absolute;  /* overlay ke liye */
+  top: 0%;             /* upar se start */
+  left: 0;            /* left se start */
+  width: 100%;        /* image ke width ke barabar */
+  height: 100%;       /* image ke height ke barabar */
+  display: inline-flex;      /* text center karne ke liye */
+  flex-direction: column;
+  justify-content: center; /* vertical center */
+  align-items: center;     /* horizontal center */
+  color: white;
+  text-align: center;
+  background: rgba(0,0,0,0.4);
+  padding-top: 200px;
+ padding-right: 60px;
+ /* display: none; */
+
+}
+
+.text h4, .text p {
+  margin: 0;
+  display: none;
+
+}
+
+.text h4{
+  padding-right: 60px;
+  /* background-color: #fff; */
+
+}
+.text p{
+  padding-right: 90;
+  /* background-color: #fff; */
+
+}
+
+.text:hover{
+  background-color:transparent;
+
+}
+
+
+
+
+.overlay{
+  width: 100%;
+  height: calc(100% - 110px);
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  margin-top: 50px;
+  /* border: 2px solid black; */
+  border-radius: 40px;
+  padding: 5px 5px;
+  display: none;
+  
+}
+
+
+.overlay img {
+  width: 100%;       /* full width */
+  height: 100%;      /* full height */
+  object-fit: contain; /* div ko cover kare image ko */
+  box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+  animation: zoomIn 0.3s ease;
+  border-radius: 40px;
+  margin: auto;
+ 
+}
+
+
+
+.overlay #zoom{
+  color: rgb(134, 125, 106); 
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.overlay #zoom:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+#details {
+  pointer-events: auto; /* click ke liye */
+}
