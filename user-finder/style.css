@@ -47,11 +47,13 @@ body {
     height: 80%;
     background: rgba(255, 255, 255, 0.08); 
     border: 1px solid rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(20px) saturate(150%); 
     -webkit-backdrop-filter: blur(20px) saturate(150%); 
+    backdrop-filter: blur(20px) saturate(150%); 
+    
     border-radius: 40px;   
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); 
     /* overflow: hidden; */
+    -webkit-user-select: none;
     user-select: none;
 
 }
@@ -62,8 +64,9 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 40px;
     background: rgba(255, 255, 255, 0.1);
+     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+   
     margin-top: 19px;
     width: 60%;
     left: 50%;
@@ -117,8 +120,9 @@ input::placeholder {
   
   /* Glassmorphism effect */
   background: rgba(255, 255, 255, 0.15);
+   -webkit-backdrop-filter: blur(12px) saturate(150%);
   backdrop-filter: blur(12px) saturate(150%);
-  -webkit-backdrop-filter: blur(12px) saturate(150%);
+ 
   
   border-radius: 14px;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -168,8 +172,9 @@ display: none; /* Initially hidden */
   border-radius: 20px;
 
   background: rgba(255, 255, 255, 0.08); /* transparent glass */
+    -webkit-backdrop-filter: blur(16px) saturate(150%);
   backdrop-filter: blur(16px) saturate(150%);
-  -webkit-backdrop-filter: blur(16px) saturate(150%);
+
 
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);

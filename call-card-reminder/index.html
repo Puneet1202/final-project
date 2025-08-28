@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+
+  <div class="main">
+    <div class="form">
+      <h2>Call Card Reminder</h2>
+      <form action="" id="form">
+        <label>Image url</label>
+        <input type="text" id="image-url" placeholder="https://example.com/image.jpg" >
+
+        <label>Full name</label>
+        <input type="text" id="title" placeholder="Enter full name" >
+
+        <label>Home town</label>
+        <input type="text" id="town" placeholder="Enter home town" >
+
+        <label>Phone number</label>
+        <input type="text" id="phone" placeholder="Enter phone number" >
+
+        <label>Purpose</label>
+        <input type="text" id="purpose" placeholder="e.g., quick appointment" >
+
+        <label>Category</label>
+        <div class="category">
+          <label class="checkbox-wrapper">
+            <input type="radio" name="radio"  value="Emergency">
+            Emergency
+          </label>
+
+          <label class="checkbox-wrapper">
+            <input type="radio" name="radio"  value="Important">
+
+            Important
+          </label>
+
+          <label class="checkbox-wrapper">
+            <input type="radio" name="radio"  value="Urgent">
+            Urgent
+          </label>
+
+          <label class="checkbox-wrapper">
+            <input type="radio" name="radio"  value="No rush">
+            No rush
+          </label>
+        </div>
+        <div class="buttons">
+          <button type="submit" id="submit-button">Submit</button>
+          <button type="button" id="close-button" class="close">Close</button>
+        </div>
+      </form>
+    </div>
+    <div class="box-card">
+
+    
+
+    <div class="up-down-div">
+      <i class="ri-add-fill" id="add"></i>
+     <i class="ri-arrow-up-line" id="up"></i>
+      <i class="ri-arrow-down-line" id="down"></i>
+    </div>
+ 
+
+      <div class="colour-div">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>  
